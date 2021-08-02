@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$parag-color: hsla(0, 0%, 100%, 0.5);
+$primary-color: hsl(0, 0%, 95%);
+$orange: hsl(31, 77%, 52%);
+$cyan:hsl(184, 100%, 22%);
+$dark-cyan: hsl(179, 100%, 13%);
+$parag-size: 15px;
+$parag-family: 'Lexend Deca', sans-serif;
+$heading-family: 'Big Shoulders Display', cursive;
+
+@mixin text($family, $size, $color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin blockDesign($pad, $bordRad, $color){
+    padding: $pad;
+    background-color: $color;
+    border-radius: $bordRad;
+    button{
+        color: $color;
+    }
+}
+
+@mixin buttonHover($bkgColor, $color){
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: $bkgColor;
+    h3{
+        transition: 0.5s;
+        color: $color;
+    }
+}
+
+body{
+    background-color: $primary-color;
+}
+
+#wrapper{
+    width: 70%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    #first-block{
+        @include blockDesign(5%, 0.7em 0 0 0.7em, $orange);
+        button:hover{
+            @include buttonHover($orange, $primary-color);
+        }
+    }
+
+    #second-block{
+        @include blockDesign(5%, 0 0 0 0, $cyan);
+        button:hover{
+            @include buttonHover($cyan, $primary-color);
+        }
+    }
+
+    #third-block{
+        @include blockDesign(5%, 0 0.7em 0.7em 0, $dark-cyan);
+        button:hover{
+            @include buttonHover($dark-cyan, $primary-color);
+        }
+    }
+
+    button{
+        width: 70%;
+        height: 18%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40%;
+        border: none;
+        border-radius: 3em;
+        transition: 0.5s;
+    }
+}
+
+h2{
+    @include text($heading-family, 2em, $primary-color);
+}
+
+p{
+    @include text($parag-family, $parag-size, $parag-color);
+}
+
+@media (max-width: 700px) {
+    #wrapper{
+        display: block;
+        position: absolute;
+        width: 90%;
+        top: 65%; left: 50%;
+        transform: translate(-50%, -50%);
+    
+        #first-block{
+            @include blockDesign(10%, 0.7em 0.7em 0 0, $orange);
+            button:hover{
+                @include buttonHover($orange, $primary-color);
+            }
+        }
+    
+        #second-block{
+            @include blockDesign(10%, 0 0 0 0, $cyan);
+            button:hover{
+                @include buttonHover($cyan, $primary-color);
+            }
+        }
+    
+        #third-block{
+            @include blockDesign(10%, 0 0 0.7em 0.7em, $dark-cyan);
+            button:hover{
+                @include buttonHover($dark-cyan, $primary-color);
+            }
+        }
+    
+        button{
+            width: 40%;
+            height: 18%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0%;
+            border: none;
+            border-radius: 3em;
+            transition: 0.5s;
+        }
+    }
+}

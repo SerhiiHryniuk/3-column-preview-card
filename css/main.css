@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+body {
+  background-color: #f2f2f2;
+}
+
+#wrapper {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+#wrapper #first-block {
+  padding: 5%;
+  background-color: #e38826;
+  border-radius: 0.7em 0 0 0.7em;
+}
+#wrapper #first-block button {
+  color: #e38826;
+}
+#wrapper #first-block button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #e38826;
+}
+#wrapper #first-block button:hover h3 {
+  transition: 0.5s;
+  color: #f2f2f2;
+}
+#wrapper #second-block {
+  padding: 5%;
+  background-color: #006970;
+  border-radius: 0 0 0 0;
+}
+#wrapper #second-block button {
+  color: #006970;
+}
+#wrapper #second-block button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #006970;
+}
+#wrapper #second-block button:hover h3 {
+  transition: 0.5s;
+  color: #f2f2f2;
+}
+#wrapper #third-block {
+  padding: 5%;
+  background-color: #004241;
+  border-radius: 0 0.7em 0.7em 0;
+}
+#wrapper #third-block button {
+  color: #004241;
+}
+#wrapper #third-block button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #004241;
+}
+#wrapper #third-block button:hover h3 {
+  transition: 0.5s;
+  color: #f2f2f2;
+}
+#wrapper button {
+  width: 70%;
+  height: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40%;
+  border: none;
+  border-radius: 3em;
+  transition: 0.5s;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2em;
+  color: #f2f2f2;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 700px) {
+  #wrapper {
+    display: block;
+    position: absolute;
+    width: 90%;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #wrapper #first-block {
+    padding: 10%;
+    background-color: #e38826;
+    border-radius: 0.7em 0.7em 0 0;
+  }
+  #wrapper #first-block button {
+    color: #e38826;
+  }
+  #wrapper #first-block button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #e38826;
+  }
+  #wrapper #first-block button:hover h3 {
+    transition: 0.5s;
+    color: #f2f2f2;
+  }
+  #wrapper #second-block {
+    padding: 10%;
+    background-color: #006970;
+    border-radius: 0 0 0 0;
+  }
+  #wrapper #second-block button {
+    color: #006970;
+  }
+  #wrapper #second-block button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #006970;
+  }
+  #wrapper #second-block button:hover h3 {
+    transition: 0.5s;
+    color: #f2f2f2;
+  }
+  #wrapper #third-block {
+    padding: 10%;
+    background-color: #004241;
+    border-radius: 0 0 0.7em 0.7em;
+  }
+  #wrapper #third-block button {
+    color: #004241;
+  }
+  #wrapper #third-block button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #004241;
+  }
+  #wrapper #third-block button:hover h3 {
+    transition: 0.5s;
+    color: #f2f2f2;
+  }
+  #wrapper button {
+    width: 40%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    border: none;
+    border-radius: 3em;
+    transition: 0.5s;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

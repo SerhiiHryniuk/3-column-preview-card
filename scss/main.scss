@@ -38,47 +38,6 @@ body{
     background-color: $primary-color;
 }
 
-#wrapper{
-    width: 70%;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-
-    #first-block{
-        @include blockDesign(5%, 0.7em 0 0 0.7em, $orange);
-        button:hover{
-            @include buttonHover($orange, $primary-color);
-        }
-    }
-
-    #second-block{
-        @include blockDesign(5%, 0 0 0 0, $cyan);
-        button:hover{
-            @include buttonHover($cyan, $primary-color);
-        }
-    }
-
-    #third-block{
-        @include blockDesign(5%, 0 0.7em 0.7em 0, $dark-cyan);
-        button:hover{
-            @include buttonHover($dark-cyan, $primary-color);
-        }
-    }
-
-    button{
-        width: 70%;
-        height: 18%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40%;
-        border: none;
-        border-radius: 3em;
-        transition: 0.5s;
-    }
-}
-
 h2{
     @include text($heading-family, 2em, $primary-color);
 }
@@ -87,13 +46,55 @@ p{
     @include text($parag-family, $parag-size, $parag-color);
 }
 
+@media (min-width: 701px) {
+    #wrapper{
+        width: 70%;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+    
+        #first-block{
+            @include blockDesign(5%, 0.7em 0 0 0.7em, $orange);
+            button:hover{
+                @include buttonHover($orange, $primary-color);
+            }
+        }
+    
+        #second-block{
+            @include blockDesign(5%, 0 0 0 0, $cyan);
+            button:hover{
+                @include buttonHover($cyan, $primary-color);
+            }
+        }
+    
+        #third-block{
+            @include blockDesign(5%, 0 0.7em 0.7em 0, $dark-cyan);
+            button:hover{
+                @include buttonHover($dark-cyan, $primary-color);
+            }
+        }
+    
+        button{
+            width: 70%;
+            height: 18%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40%;
+            border: none;
+            border-radius: 3em;
+            transition: 0.5s;
+        }
+    }
+    
+}
+
 @media (max-width: 700px) {
     #wrapper{
         display: block;
-        position: absolute;
         width: 90%;
-        top: 65%; left: 50%;
-        transform: translate(-50%, -50%);
+        padding: 5% 0 0 5%;
     
         #first-block{
             @include blockDesign(10%, 0.7em 0.7em 0 0, $orange);
